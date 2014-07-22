@@ -1,0 +1,22 @@
+{
+  "name": "fishbowl",
+  "version": "0.0.1",
+  "homepage": "https://github.com/patrickshampine/fishbowl",
+  "authors": [
+    "patrickshampine <patrick@patrickshampine.com>"
+  ],
+  "description": "A small randomized movie app.",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.11.0"
+  }
+}
