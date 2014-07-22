@@ -1,10 +1,18 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="fishbowl">
 <head>
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/config.js"></script>
 </head>
 <body>
+
+  <div class="container" ng-controller="CatalogController as catalog">
+    <li class="movie-item" ng-repeat="movie in catalog.movies">
+      {{movie.title}}
+      <img ng-src="{{movie.posters.thumbnail}}">
+    </li>
+  </div>
 
 </body>
 </html>
