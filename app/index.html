@@ -4,14 +4,23 @@
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
 <script type="text/javascript" src="/js/config.js"></script>
+<link rel="stylesheet" href="/css/screen.css">
 </head>
-<body>
+<body class="bg-ivy">
+
+  <section class="fishbowl">
+    <div class="container">
+      <a href class="btn btn-default">Random Movie</a>
+    </div>
+  </section>
 
   <div class="container" ng-controller="CatalogController as catalog">
-    <li class="movie-item" ng-repeat="movie in catalog.movies">
-      {{movie.title}}
-      <img ng-src="{{movie.posters.thumbnail}}">
-    </li>
+    <div class="row">
+      <div class="movie-item col-sm-2" ng-repeat="movie in catalog.movies">
+        <img ng-src="{{movie.posters.original}}">
+        {{movie.title}}
+      </div>
+    </div>
   </div>
 
 </body>

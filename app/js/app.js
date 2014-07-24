@@ -7,7 +7,7 @@
 
     catalog.movies = [];
 
-    catalogUrl = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/current_releases.json';
+    catalogUrl = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json';
 
     $http.jsonp(catalogUrl, {
         params: {
