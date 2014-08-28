@@ -32,7 +32,7 @@ module.exports = (grunt) ->
           dest: 'app/img/'
         ]
 
-    browser_sync:
+    browserSync:
       files:
         src: 'app/css/screen.css'
       options:
@@ -53,4 +53,4 @@ module.exports = (grunt) ->
         tasks: ['imagemin']
 
   # Development task checks and concatenates JS, compiles SASS preserving comments and nesting, runs dev server, and starts watch
-  grunt.registerTask 'default', ['compass', 'imagemin', 'browser_sync', 'watch']
+  grunt.registerTask 'default', ['compass', 'imagemin', 'browserSync', 'watch']
