@@ -7,10 +7,15 @@ module.exports = (grunt) ->
 
     pkg: grunt.file.readJSON 'package.json'
 
-    # concat:
-    #   min:
-    #     files:
-    #       'public/js/main.js': ['public/js/src/libs/*.js','public/js/src/*.js']
+    concat:
+      min:
+        files:
+          'app/js/main.js': [
+            'public/js/services/*.js',
+            'public/js/controllers/*.js',
+            'public/js/config.js',
+            'public/js/app.js'
+          ]
 
     compass:
       dist:
@@ -42,9 +47,9 @@ module.exports = (grunt) ->
     watch:
       options:
         livereload: true
-      # scripts:
-      #   files: ['public/js/src/*.js','public/js/src/libs/*.js']
-      #   tasks: ['concat']
+      scripts:
+        files: ['public/js/app.js', 'public/js/config.js', 'public/js/controllers/*.js', 'public/js/services/*.js']
+        tasks: ['concat']
       styles:
         files: ['app/css/**/*.{sass,scss}','app/img/ui/*.png']
         tasks: ['compass']
@@ -53,4 +58,4 @@ module.exports = (grunt) ->
         tasks: ['imagemin']
 
   # Development task checks and concatenates JS, compiles SASS preserving comments and nesting, runs dev server, and starts watch
-  grunt.registerTask 'default', ['compass', 'imagemin', 'browserSync', 'watch']
+  grunt.registerTask 'default', ['compass', 'concat', 'imagemin', 'browserSync', 'watch']

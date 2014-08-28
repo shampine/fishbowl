@@ -7,19 +7,17 @@
 
     catalog.movies = [];
 
-    catalogUrl = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json';
+    catalogURL = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json';
 
-    $http.jsonp(catalogUrl, {
-        params: {
-            apikey: CONFIG.ROTTEN_TOMATOES,
-            callback: 'JSON_CALLBACK'
-        }
+    $http.jsonp(catalogURL, {
+      params: {
+        apikey: CONFIG.ROTTEN_TOMATOES,
+        callback: 'JSON_CALLBACK'
+      }
     })
     .success(function (data) {
   
-        catalog.movies = data;
         catalog.movies = data.movies;
-        console.log(catalog.movies);
 
     });
 
