@@ -1,4 +1,4 @@
-angular.module('generatorMeanstackApp')
+angular.module('loadMovies')
   .factory('jsonFactory', function ($q, $http) {
     return {
       getOtherStuff: function () {

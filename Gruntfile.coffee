@@ -11,10 +11,10 @@ module.exports = (grunt) ->
       min:
         files:
           'app/js/main.js': [
-            'public/js/services/*.js',
-            'public/js/controllers/*.js',
-            'public/js/config.js',
-            'public/js/app.js'
+            'app/js/app.js',
+            'app/js/config.js',
+            'app/js/services/*.js',
+            'app/js/controllers/*.js'
           ]
 
     compass:
@@ -48,7 +48,7 @@ module.exports = (grunt) ->
       options:
         livereload: true
       scripts:
-        files: ['public/js/app.js', 'public/js/config.js', 'public/js/controllers/*.js', 'public/js/services/*.js']
+        files: ['app/js/app.js', 'app/js/config.js', 'app/js/controllers/*.js', 'app/js/services/*.js']
         tasks: ['concat']
       styles:
         files: ['app/css/**/*.{sass,scss}','app/img/ui/*.png']

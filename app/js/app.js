@@ -1,6 +1,6 @@
 (function() {
 
-  var app = angular.module('fishbowl', ['fishbowl.config']);
+  var app = angular.module('fishbowl', ['fishbowl.config', 'loadMovies']);
 
   app.controller('CatalogController', [ '$http', 'CONFIG', function($http, CONFIG) {
     var catalog = this;
@@ -24,3 +24,4 @@
   }]);
 
 })();
+
