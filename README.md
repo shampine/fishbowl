@@ -1,6 +1,6 @@
 # fishbowl
 
-Idea is that this is a small project just serve you up a random movie from the infamous `1001 Movies You Must See Before You Die`.
+This is a small project that serves up a random movie from the infamous `1001 Movies You Must See Before You Die`.
 
 ## setup
 
@@ -12,7 +12,9 @@ npm install
 
 - integrate YouTube trailers via the YouTube API
 - mongo database to track those watched
-- thumbs up/thumbs down rating
+- thumbs up/thumbs down ratings
+- ???
+- profit
 
 ## license
 
