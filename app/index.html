@@ -1,29 +1,22 @@
 <!DOCTYPE HTML>
-<html ng-app="fishbowl">
+<html>
 <head>
-<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-<!-- <script type="text/javascript" src="/js/config.js"></script> -->
 <link rel="stylesheet" href="/css/screen.css">
 </head>
-<body class="bg-ivy">
+<body>
 
-  <section class="fishbowl">
-    <div class="container">
-      <a href class="btn btn-default">Random Movie</a>
-    </div>
-  </section>
 
-  <div class="container" ng-controller="CatalogController as catalog">
-    <div class="row">
-      <div class="movie-item col-sm-2" ng-repeat="movie in catalog.movies">
-        <img ng-src="{{movie.posters.original}}">
-        {{movie.title}}
-      </div>
-    </div>
-  </div>
-<script type='text/javascript'>//<![CDATA[
-document.write("<script async src='//HOST:3000/browser-sync-client.1.3.6.js'><\/script>".replace(/HOST/g, location.hostname));
-//]]></script>
+<script id="random_movie" type="">
+
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type='text/javascript' id="__bs_script__">
+  if(window.location.hostname === 'fishbowl.dev') {
+    //<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.7.1.js'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  }
+</script>
 </body>
 </html>

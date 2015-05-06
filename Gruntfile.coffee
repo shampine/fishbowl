@@ -7,14 +7,12 @@ module.exports = (grunt) ->
 
     pkg: grunt.file.readJSON 'package.json'
 
-    concat:
+    uglify:
       min:
         files:
           'app/js/main.js': [
-            'app/js/app.js',
-            'app/js/config.js',
-            'app/js/services/*.js',
-            'app/js/controllers/*.js'
+            'app/js/src/libs/*.js',
+            'app/js/src/*.js'
           ]
 
     compass:
@@ -28,15 +26,6 @@ module.exports = (grunt) ->
           outputStyle: 'compressed'
           force: true
 
-    imagemin:
-      dynamic:
-        files: [
-          expand: true
-          cwd: 'app/img/src'
-          src: ['*.{png,jpg,gif}']
-          dest: 'app/img/'
-        ]
-
     browserSync:
       files:
         src: 'app/css/screen.css'
@@ -48,14 +37,11 @@ module.exports = (grunt) ->
       options:
         livereload: true
       scripts:
-        files: ['app/js/app.js', 'app/js/config.js', 'app/js/controllers/*.js', 'app/js/services/*.js']
-        tasks: ['concat']
+        files: ['app/js/src/libs/*.js', 'app/js/src/*.js']
+        tasks: ['uglify']
       styles:
         files: ['app/css/**/*.{sass,scss}','app/img/ui/*.png']
         tasks: ['compass']
-      images:
-        files: ['app/img/src/*.{png,jpg,gif}']
-        tasks: ['imagemin']
 
   # Development task checks and concatenates JS, compiles SASS preserving comments and nesting, runs dev server, and starts watch
-  grunt.registerTask 'default', ['compass', 'concat', 'imagemin', 'browserSync', 'watch']
+  grunt.registerTask 'default', ['compass', 'uglify', 'browserSync', 'watch']
