@@ -1,4 +1,4 @@
-[
+var movies = [
     {
         "title": "The Cool World",
         "year": "(1963)",
@@ -7013,4 +7013,4 @@
         "description": "A sleazy cable-TV programmer begins to see his life and the future of media spin out of control in a very unusual fashion when he acquires a new kind of programming for his station. (87 mins.)",
         "url": "/title/tt0086541/"
     }
-]
+];

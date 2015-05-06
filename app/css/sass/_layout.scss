@@ -1,4 +1,57 @@
+// Variables //
+$seafoam: #2eb298;
+$purple: #5a18bc;
+$white: #ffffff;
+$black: #111111;
+
+$cursive: 'Indie Flower', cursive;
+
+// Styles
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
 body {
+  background-color: $seafoam;
+}
 
+.container {
+  display: block;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url('/img/fishbowl.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+.title {
+  padding-top: 10%;
+  font-family: $cursive;
+  font-size: 60px;
+  color: $white;
+  text-align: center;
+}
+
+.fishbowl {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.big-red-button {
+  width: 250px;
+  height: 250px;
+  margin-top: 250px;
+  border: 0px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $purple;
+  font-family: $cursive;
+  font-size: 42px;
+  &:focus, &:hover, &:active {
+    background-color: darken($purple, 10%);
+  }
 }

@@ -1,5 +1,7 @@
 ;(function($) {
 
+  console.log(movies);
+
   function Fishbowl() {
 
   }
@@ -8,7 +10,7 @@
 
   }
 
-  
 
 
-})(Jquery);
+
+})(jQuery);

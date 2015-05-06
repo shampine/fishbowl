@@ -17,8 +17,7 @@ $rgbapng_px_size: 1;
 @import "rgbapng";
 
 /* SCSS Modules */
+@import "reset";
 @import "mixins";
 @import "typography";
-@import "colors";
-
 @import "layout";
