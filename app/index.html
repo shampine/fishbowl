@@ -14,9 +14,15 @@
     <button class="big-red-button">Movie Please</button>
   </section>
 </div>
+<div id="overlay"></div>
 <!-- handlebars -->
-<script id="random_movie" type="">
-
+<script id="random_movie" type="text/x-handlebars-template">
+  <div class="modal">
+    <h1>{{ title }} <span>{{ year }}</span></h1>
+    <div class="rating">{{ rating }}</div>
+    <div class="description">{{ description }}</div>
+    <a class="btn" href="http://www.imdb.com{{ url }}" target="_blank">View on IMDB</a>
+  </div>
 </script>
 <!-- scripts -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
