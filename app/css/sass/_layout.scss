@@ -18,13 +18,16 @@ body {
 
 .container {
   display: block;
-  max-width: 1200px;
+  max-width: 1600px;
   height: 100%;
   margin: 0 auto;
   background-image: url('/img/fishbowl.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width:1600px) {
+    background-size: contain;
+  }
 }
 
 .title {
